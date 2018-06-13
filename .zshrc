@@ -86,7 +86,13 @@ source $HOME/.zsh_functions
 
 eval "$(rbenv init -)"
 
-. ~/.z_bin/z.sh
 
 export JAVA_HOME=$(/usr/libexec/java_home)
 if which swiftenv > /dev/null; then eval "$(swiftenv init -)"; fi
+export QT_HOME="/usr/local/opt/qt@5.5"
+export PATH="${QT_HOME}/bin:$PATH"
+
+export MYSQL_HOME="/usr/local/opt/mysql@5.6"
+export PATH="${MYSQL_HOME}/bin:$PATH"
+
+export PATH="/usr/local/opt/elasticsearch/bin:$PATH"
